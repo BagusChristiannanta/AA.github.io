@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Ascend Automotive</title>
+
+    <!-- Link untuk ke CSS -->
+    <link rel="stylesheet" href="Assisten/style.css">
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Menu Icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Logo -->
+            <a href="#" class="logo">Ascend <span>Automotive</span></a>
+            <!-- Nav List -->
+            <ul class="navbar">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="Cars.html">CARS</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Parts.html">PARTS</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+            </ul>
+            <!-- Search Icon -->
+            <i class='bx bx-search' id="search-icon"></i>
+            <!-- Search Box -->
+            <div class="search-box container">
+                <input type="search" name="" id="" placeholder="search here...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section class="Home" id="HOME">
+        <div class="Home-text">
+            <h1>Kita Punya Segalanya <br>Yang <span>Mobil</span> Butuhkan</h1>
+            <p>Kita Menyediakan Mobil Yang Terbaru<br> Dengan Harga Terjangkau dan Kualitas Terbaik .</p>
+            <!-- Tombol Home -->
+            <a href="#" class="btn">Temukan Sekarang</a>
+        </div>
+    </section>
+    <div class="aboutme-container">
+        <div class="aboutme-text">
+            <span>Tentang Kami</span>
+            <h2>Informatika <br>Telkom University Surabaya</h2>
+            <p>Sekumpulan Pecinta Otomotif Yang Kuliah Di Telkom University Dengan Prodi Informatika</p>
+        </div>
+        <div class="aboutme-video">
+            <iframe width="150%" height="150%"  src="https://www.youtube.com/embed/q5PPNZiu52w?si=IUzWXT8qGlLkqQny" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <!-- Koleksi Mobil Terbaru -->
+<div class="slideshow-header">
+    <h2>Inilah beberapa koleksi mobil terbaru kami</h2>
+</div>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="img/BMW X3.jpeg" style="width:50%">
+        <div class="text">BMW X3 merupakan mobil SUV medium mewah yang diproduksi oleh perusahaan Jerman, BMW sejak 2003.SUV ini berbasis dari platform BMW Seri 3, dan sekarang di generasi ketiga, BMW menyebut crossover ini sebagai Sport Activity Vehicle (SAV), deskriptor perusahaan untuk kendaraan </div>
+    </div>
+    <div class="mySlides fade">
+        <img src="img/Bugatti Chiron.jpeg" style="width:50%">
+        <div class="text">Bugatti Chiron mobil sport dua tempat duduk bermesin tengah yang dirancang dan dikembangkan di Jerman oleh Bugatti Engineering GmbH</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="img/458 ferrari.jpeg.jpg" style="width:50%">
+        <div class="text">Ferarri 458 merupakan Mobil Sport asal italia yang bermesin tengah yang merupakan penerus dari 430 dan di Perkenalkan Tahun 2009</div>
+    </div>
+    <!-- Tombol navigasi -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+    
+
+    <!-- Tombol scroll to top -->
+    <div onclick="topFunction()" id="scrollToTopBtn" title="Go to top" class="bx bx-up-arrow-alt"></div>
+
+    <!-- Link ke JS -->
+    <script src="Assisten/main.js"></script>
+</body>
+</html>

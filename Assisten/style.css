@@ -1,0 +1,843 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 1rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --main-color:#996515 ;
+    --text-color: #020102;
+    --background-color: #fff;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: var(--text-color)
+}
+
+section{
+    padding: 4rem 0 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header  {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.shadow{
+    background: var(--background-color);
+    box-shadow: 4px 4px 20px rgb(15, 54, 54 / 10%);
+    transition: 0.5s ease;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
+    margin-top: 1rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    background-image: url('/img/A\ \(1\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 90px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-position: 0 50%;
+    margin-top: 1rem;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    column-gap: 2rem;
+    margin-left: 30%;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar .active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.search-box {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left : 0;
+    background : var(--background-color);
+    box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
+    clip-path: circle(0% at 100% 0%);
+}
+
+.search-box.active {
+    clip-path: circle(144% at 100% 0%);
+    transition: 0.4s;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.Home{
+    position: revert-layer;
+    max-width: 1900px;
+    margin: auto;
+    width: 100%;
+    min-height: 695px;
+    display: flex;
+    align-items: center;
+    background: url(/img/HomeImage-removebg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center left;
+}
+.Home-text{
+    padding-left: 130px;
+}
+.Home-text h1{
+    font-size: 2.4rem;
+}
+.Home-text span{
+    color: var(--main-color);
+}
+.Home-text p{
+    font-size: 0.938rem;
+    font-weight: 300;
+    margin: 0.5rem 0 1.2rem;
+}
+
+.btn{
+    padding: 10px 22px;
+    background: var(--main-color);
+    color: var(--background-color);
+    font-weight: 400;
+}
+.btn:hover{
+    background: #fd052f;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.heading span{
+    font-weight: 500;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.heading h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.heading p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cars-container .box{
+    flex: 1 1 17rem;
+    position: relative;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.cars-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.cars-container .box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.cars-container .box h2{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: transparent;
+    padding: 8px;
+    color: #fffaf0;
+    border-radius: 0.5rem;
+}
+
+.cars-container .box:hover h2{
+    background: black;
+    color: var(--background-color);
+}
+
+.about{
+    display: -webkit-box;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 6rem;
+}
+
+.about-img{
+    flex: 1 1 21rem;
+}
+
+.about-text{
+    flex: 1 1 21rem;
+    margin-left: 8%;
+}
+
+.about-text span{
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.about-text h2{
+    font-size: 1.7rem;
+}
+
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+    margin-top: 2rem;
+}
+
+.parts-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.parts-container .box{
+    flex: 1 1 17rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background:#f6f6f6;
+    border-radius: 0.5rem;
+}
+
+.parts-container .box img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.parts-container .box h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.parts-container .box span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.parts-container .box .bx{
+    color: var(--main-color);
+    margin: 0.8rem 0;
+}
+
+.parts-container .box .btn{
+    max-width: 155px;
+}
+
+.parts-container .box .detail{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.parts-container .box .detail:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-container .box{
+    flex: 1 1 13rem;
+    padding: 20px;
+}
+
+.blog-container .box:hover{
+    background: #f6f6f6;
+}
+
+.blog-container .box span{
+    font-size: 0.8rem;
+    color: var(--main-color);
+}
+
+.blog-container h3{
+    font-size: 1.2rem;
+}
+
+.blog-container .box p{
+    font-size: 0.938rem;
+    margin: 4px 0;
+}
+
+.blog-container .box .blog-btn{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    color: var(--text-color);
+}
+
+.blog-container .box .blog-btn .bx{
+    font-size: 20px;
+}
+
+.blog-container .box .blog-btn:hover{
+    color: var(--main-color);
+    column-gap: 0.7rem;
+    transition: 0.4s;
+}
+
+.footer{
+    background:#606060;
+    color: #f6f6f6;
+    border-top: 2px solid var(--main-color);
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo{
+    color: var(--background-color);
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Styling untuk gambar logo */
+.social img {
+    width: 30px; /* Mengatur lebar gambar */
+    height: auto; /* Mengatur tinggi gambar secara otomatis sesuai proporsi */
+}
+
+.social a{
+    font-size: 24px;
+    color: var(--background-color);
+    margin-right: 1rem;
+}
+
+.social a:hover{
+    color: var(--main-color);
+}
+
+.footer-box h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a,
+.footer-box p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-box a:hover{
+    color: var(--main-color);
+}
+
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--background-color);
+    background: #606060;
+}
+
+.aboutme-container {
+    max-width: 1900px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+}
+
+.aboutme-video {
+    flex: 2.5rem; /* Ubah nilai flex untuk membuatnya sedikit lebih besar */
+    display: flex;
+    justify-content: center; /* Menengahkan video secara horizontal */
+    margin-top: 2rem;
+    display: -webkit-box;
+    margin-right: 10rem;
+}
+
+.aboutme-video video {
+    max-width: 100%;
+    height: auto;
+}
+.aboutme-text {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.aboutme-text span {
+    color: #996515;
+    font-weight: bold;
+}
+
+.aboutme-text h2 {
+    margin: 10px 0;
+}
+
+.aboutme-text p {
+    margin-bottom: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    border-radius: 10px; /* Efek melengkung */
+    overflow: hidden; /* Hindari gambar terlalu keluar dari lingkaran */
+}
+
+/* Style the navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style untuk tulisan */
+.text {
+    position: absolute;
+    top: 50%;
+    right: 12px; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    max-width: 370px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Container untuk slideshow */
+.slideshow-container {
+    max-width: 800px;
+    margin: 50px auto 20px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px; 
+    display: flex;
+    overflow: hidden;
+}
+
+/* Gaya untuk slideshow header */
+.slideshow-header {
+    text-align: center; /* Posisikan teks ke tengah */
+    margin-top: 20px; /* Beri jarak atas */
+}
+
+.slideshow-header h2 {
+    font-size: 24px; /* Ukuran font */
+    color: #333; /* Warna teks */
+    margin-top: 6rem;
+}
+
+
+/* Efek fade untuk setiap slide */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Tombol navigasi */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for Saran dan Masukkan */
+.saran-masukkan {
+margin-top: 10rem;
+padding: 20px;
+background-color: #f8f8f8;
+border-radius: 5px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 1.5rem;
+}
+
+.saran-masukkan h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.saran-masukkan p {
+color: #555;
+font-size: 16px;
+line-height: 1.5;
+margin: auto;
+}
+
+/* Tombol scroll to top */
+#scrollToTopBtn {
+display: flex; /* Default tombol disembunyikan */
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+background-color: #333;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+
+#scrollToTopBtn:hover {
+background-color: #555;
+}
+
+/* Container untuk formulir */
+.form-container {
+    max-width: 600px; /* Sesuaikan dengan lebar yang diinginkan */
+    margin: 0 auto; /* Untuk membuat formulir berada di tengah */
+}
+
+/* Form styling */
+form {
+    width: 100%; /* Lebarkan formulir hingga sejajar dengan Saran dan Masukkan */
+    max-width: 100%; /* Pastikan formulir tidak melebihi lebar maksimum */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #996515;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #fd052f;
+}
+
+/* making responsive */
+
+@media (max-width: 1080px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+@media (max-width: 900px){
+    .aboutme-container{
+        flex-direction: column;
+    }
+    .slideshow-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav{
+        padding: 15px 20px0;
+    }
+    section {
+        padding: 3rem 0 1rem;
+    }
+    .Home-text {
+        padding-left: 2rem;
+    }
+    .Home-text h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 920px) {
+    #search-icon {
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        position: fixed;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    .search-box input {
+        padding: 15px;
+    }
+    .nav {
+        padding: 10px 0;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .navbar {
+        display: none; /* Mengubah display menjadi none */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--background-color);
+        row-gap: 0.5rem;
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(15, 54, 55 / 20%);
+        margin: auto;
+        clip-path:circle(0% at 0% 0%);
+        transition: 0.5s;
+    }
+    .navbar a {
+        display: block;
+        padding: 15px;
+    }
+    .navbar a:hover,
+    .navbar .active {
+        border-bottom: none;
+        background: var(--main-color);
+        color: var(--background-color);
+    }
+    .active {
+        clip-path: circle(144% at 0% 0%);
+    }
+    .blog-container .box {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 727px) {
+    .heading span {
+        font-size: 0.9rem;
+    }
+    .heading h2 {
+        font-size: 1.4rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:607px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:360px){
+    .search-box input{
+        padding: 11px;
+    }
+    .Home{
+        min-height: 500px;
+    }
+    .Home-text h1{
+        font-size: 2rem;
+    }
+    .Home-text p br{
+        display: contents;
+    }
+}
